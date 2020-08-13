@@ -31,10 +31,12 @@ void Window::loop()
 {
 	
 	GL::VAO vao;
-	vao.addVertexBufferObject({0, 0, 0, 1.0f, 0, 0, 0, 1.0f,  0});//{0, 0.5f, 0, -0.5f, -0.5f, 0, 0.5f, -0.5f, 0}
+	vao.addVertexBufferObject({ {0, 0, 0}, {1.0f, 0, 0}, {0, 1.0f,  0} }); //координаты вершин
+	vao.addVertexBufferObject({ {1, 0, 0}, {0, 1, 0}, {0, 0,  1} }); //цвета
 /**/
 	GL::Programm first("first");
 	first.bindAttribute(0, "position");
+	first.bindAttribute(1, "color");
 	first.link();
 	first.use();
 

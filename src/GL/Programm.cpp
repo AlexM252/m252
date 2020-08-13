@@ -8,8 +8,8 @@ GL::Programm::Programm(const std::string& name)
 {
 	mProgramm = glCreateProgram();
 
-	mVertexShader = loadShader("res/glsl" + name + ".vert", GL_VERTEX_SHADER);
-	mFragmentShader = loadShader("res/glsl" + name + ".frag", GL_FRAGMENT_SHADER);
+	mVertexShader = loadShader("res/glsl/" + name + ".vert", GL_VERTEX_SHADER);
+	mFragmentShader = loadShader("res/glsl/" + name + ".frag", GL_FRAGMENT_SHADER);
 }
 
 GL::Programm::~Programm()
